@@ -4,29 +4,13 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 import dayjs from "https://esm.sh/dayjs@1.11.6";
 import relativeTime from "dayjs/plugin/relativeTime";
 import "dayjs/locale/ja";
+import { Article, findAllArticles } from "@db";
 dayjs.extend(relativeTime);
 dayjs.locale("ja");
 
-interface Article {
-  id: string;
-  title: string;
-  created_at: string;
-}
-
 export const handler: Handlers<Article[]> = {
-  GET(_, ctx) {
-    const articles: Article[] = [
-      {
-        id: "1",
-        title: "Article 1",
-        created_at: "2022-06-17T00:00:00.000Z",
-      },
-      {
-        id: "2",
-        title: "Article 2",
-        created_at: "2022-06-10T00:00:00.000Z",
-      },
-    ];
+  async GET(_, ctx) {
+    const articles = await findAllArticles();
     return ctx.render(articles);
   },
 };
