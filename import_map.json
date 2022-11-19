@@ -8,6 +8,9 @@
     "@preact/signals": "https://esm.sh/*@preact/signals@1.0.3",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.0.1",
     "twind": "https://esm.sh/twind@0.16.17",
-    "twind/": "https://esm.sh/twind@0.16.17/"
+    "twind/": "https://esm.sh/twind@0.16.17/",
+    "@db": "./util/db.ts",
+    "postgress": "https://deno.land/x/postgres@v0.17.0/mod.ts",
+    "dotenv/": "https://deno.land/x/dotenv@v3.2.0/"
   }
 }
