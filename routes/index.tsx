@@ -1,7 +1,7 @@
 import { Head } from "$fresh/runtime.ts";
 import { Handlers, PageProps } from "$fresh/server.ts";
 
-import dayjs from "https://esm.sh/dayjs@1.11.6";
+import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import "dayjs/locale/ja";
 import { Article, findAllArticles } from "@db";
