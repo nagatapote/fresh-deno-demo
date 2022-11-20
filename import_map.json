@@ -2,6 +2,7 @@
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.1.2/",
     "dayjs/": "https://esm.sh/dayjs@1.11.6/",
+    "dayjs": "https://esm.sh/dayjs@1.11.6/",
     "preact": "https://esm.sh/preact@10.11.0",
     "preact/": "https://esm.sh/preact@10.11.0/",
     "preact-render-to-string": "https://esm.sh/*preact-render-to-string@5.2.4",
@@ -9,8 +10,10 @@
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.0.1",
     "twind": "https://esm.sh/twind@0.16.17",
     "twind/": "https://esm.sh/twind@0.16.17/",
-    "@db": "./util/db.ts",
+    "@db": "./utils/db.ts",
     "postgress": "https://deno.land/x/postgres@v0.17.0/mod.ts",
-    "dotenv/": "https://deno.land/x/dotenv@v3.2.0/"
+    "dotenv/": "https://deno.land/x/dotenv@v3.2.0/",
+    "marked": "https://esm.sh/marked@4.0.17",
+    "sanitize-html": "https://esm.sh/sanitize-html@2.7.0"
   }
 }
