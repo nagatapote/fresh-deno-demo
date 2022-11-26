@@ -1,4 +1,4 @@
-import { useState } from "$fresh/runtime.ts";
+import { useState } from "preact/hooks";
 import { marked } from "marked";
 import DOMPurify from "dompurify";
 
