@@ -1,6 +1,7 @@
 import { Head } from "$fresh/runtime.ts";
 import { createArticle } from "@db";
 import { Handlers, PageProps } from "$fresh/server.ts";
+import ContentForm from "../../islands/ContentForm.tsx";
 
 interface Data {
   /** バリデーションエラー情報 */
@@ -58,6 +59,7 @@ export default function CreateArticlePage({
     <div class={"min-h-screen bg-gray-200"}>
       <Head>
         <title>Create Post</title>
+        <link rel="stylesheet" href="/article.css" />
       </Head>
       <div
         class={"max-w-screen-sm mx-auto px-4 sm:px-6 md:px-8 pt-12 pb-20 flex flex-col"}
@@ -86,16 +88,7 @@ export default function CreateArticlePage({
               )}
             </div>
             <div>
-              <label class={"text-gray-500 text-sm"} htmlFor="content">
-                Content
-              </label>
-              <textarea
-                id="content"
-                rows={10}
-                class={"w-full p-2 border border-gray-300 rounded-md"}
-                name="content"
-                value={data?.content} // 前回の入力値を初期値に渡す
-              />
+              <ContentForm initialValue={data?.content} />
               {/* コンテンツの入力にバリデーションエラーがあった場合表示する */}
               {data?.error?.content && (
                 <p class={"text-red-500 text-sm"}>{data.error.content}</p>
